@@ -206,7 +206,7 @@ function App() {
         </table>
         </div>
         <>
-      <Modal color={'rgb(41, 39, 39)'}  closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
+      <Modal bg={'rgb(41, 39, 39)'}  closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Olá, amigos.</ModalHeader>
