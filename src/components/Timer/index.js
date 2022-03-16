@@ -27,6 +27,6 @@ export const Timer = ({type, setTimeRemain, isFinished}) => {
     setTimer(`${min.split('.')[0]}:${(seconds > 9) ? seconds : '0'+seconds}`)
   }
 
-  return <Flex margin={5} fontSize={20} padding={2} fontStyle={'oblique'} border={'3px solid black'} borderRadius={'md'} bg={'yellow.800'}>{timer}</Flex>
+  return <Flex margin={5} fontSize={20} padding={2} fontStyle={'oblique'} border={'3px solid black'} borderRadius={'md'} bg={'rgb(56 43 188 / 48%)'}>{timer}</Flex>
 
 }
