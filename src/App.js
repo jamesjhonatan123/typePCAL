@@ -163,7 +163,6 @@ function App() {
       setPage(0)
     }
   }
-  console.log('searchUser', searchUser)
   return (
       <div className='page' >
         <Progress backgroundSize={'cover'} isAnimated style={{transform: 'rotate(270deg)', borderRadius: '10px'}} hasStripe className='progress' width={300} backgroundPosition={'center'} backgroundImage={require('./assets/image.png')} height={300} marginBottom={-50} marginTop={50} value={100 - (alreadyTyped.length/ArrayFullText.length)*100}/>
@@ -180,7 +179,7 @@ function App() {
         }) : phrase}
         </div>
         <Timer isFinished={isFinished} setTimeRemain={setTimeRemain} type={type} />
-        <Input isDisabled={isFinished} colorScheme={'blue'} bg={'gray.600'} placeholder='Digite para começar' type="text" name="type" id="type" value={type} onKeyDown={(e) => {
+        <Input color={'white'} isDisabled={isFinished} colorScheme={'blue'} bg={'gray.600'} placeholder='Digite para começar' type="text" name="type" id="type" value={type} onKeyDown={(e) => {
           setKey(e.key)
         }} onChange={(e) => {
           setType(e.target.value)
@@ -214,7 +213,7 @@ function App() {
           <ModalBody>
             Essa é uma aplicação feita somente para fins educacionais.<br/>
             Por favor, insira seu nome para continuarmos:
-            <Input value={name} marginTop={5} onChange={(e) => {
+            <Input color={'white'}  value={name} marginTop={5} onChange={(e) => {
               setName(e.currentTarget.value)
             }}/>
           </ModalBody>
@@ -234,7 +233,7 @@ function App() {
         </ModalContent>
       </Modal>
     </>
-        <Input marginTop={10} w={80} colorScheme={'blue'} bg={'gray.600'} value={searchUser} placeholder='procure um usuário pelo nome' onChange={(e) => setSearchUser(e.currentTarget.value)}/>
+        <Input color={'white'}  marginTop={10} w={80} colorScheme={'blue'} bg={'gray.600'} value={searchUser} placeholder='procure um usuário pelo nome' onChange={(e) => setSearchUser(e.currentTarget.value)}/>
         <div className='scores'>
         <table>
           <tr>
@@ -260,8 +259,8 @@ function App() {
         </div>
         <span style={{marginTop: '5px'}}>{`página ${Math.ceil(page/5) + 1} de ${(users.length/5 > 1) ? Math.ceil(users.length/5) : 1}`}</span>
         <Flex marginTop={5} gap={5}>
-          <Button onClick={previousPage} bg={'gray.600'}>Anterior</Button>
-          <Button onClick={nextPage} bg={'gray.600'}>Próxima</Button>
+          <Button color={'white'}  onClick={previousPage} bg={'gray.600'}>Anterior</Button>
+          <Button color={'white'} onClick={nextPage} bg={'gray.600'}>Próxima</Button>
         </Flex>
         </div>
       </div>
