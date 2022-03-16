@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-globals */
 import { Button, Flex, Input, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Progress, useDisclosure, useToast } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { createUser, getAllUsers } from './api';
@@ -165,7 +166,11 @@ function App() {
   }
   return (
       <div className='page' >
+        {screen.width > 800 ?
         <Progress backgroundSize={'cover'} isAnimated style={{transform: 'rotate(270deg)', borderRadius: '10px'}} hasStripe className='progress' width={300} backgroundPosition={'center'} backgroundImage={require('./assets/image.png')} height={300} marginBottom={-50} marginTop={50} value={100 - (alreadyTyped.length/ArrayFullText.length)*100}/>
+        :
+        ''
+      }
       <div style={{marginTop: '50px'}} className="App">
         <div className='container'>
           <div className='text'>{(test) ? arrayOfPhrasesWords.map((word, index) => {
