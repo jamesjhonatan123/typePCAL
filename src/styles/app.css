@@ -62,6 +62,9 @@ input{
   align-items: center;
   flex-direction: column;
 }
+body{
+  background-color: rgb(41, 39, 39);
+}
 
 table, td, th{
   padding: 10px;
