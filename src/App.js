@@ -81,7 +81,7 @@ function App() {
   if(!finalResult){
   setNtlpm(((numberOfCharacteres - 3 * wrongCharacteres)/((timeRemain + 1)/60)).toFixed(2))
   if(isFinished){
-    setGrade(5 + 5*(((numberOfCharacteres - 3* wrongCharacteres)/((timeRemain + 1)/60) - 100)/((((numberOfCharacteres - 3* wrongCharacteres)/((timeRemain + 1)/60)) > 400) ? (((numberOfCharacteres - 3 * wrongCharacteres)/((timeRemain + 1)/60)) - 100) : (400 - 100))))
+    setGrade(5 + 5*(((numberOfCharacteres - 3* wrongCharacteres)/((timeRemain + 1)/60) - 100)/((((numberOfCharacteres - 3* wrongCharacteres)/((timeRemain + 1)/60)) > majorScore) ? (((numberOfCharacteres - 3 * wrongCharacteres)/((timeRemain + 1)/60)) - 100) : (majorScore - 100))))
   }
   if(isFinished && grade){
     createUser({
