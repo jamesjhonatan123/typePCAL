@@ -166,7 +166,7 @@ function App() {
   }
   return (
       <div className='page' >
-        {screen.width > 800 ?
+        {screen.height > 700 ?
         <Progress backgroundSize={'cover'} isAnimated style={{transform: 'rotate(270deg)', borderRadius: '10px'}} hasStripe className='progress' width={300} backgroundPosition={'center'} backgroundImage={require('./assets/image.png')} height={300} marginBottom={-50} marginTop={50} value={100 - (alreadyTyped.length/ArrayFullText.length)*100}/>
         :
         ''
