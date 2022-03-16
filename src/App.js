@@ -206,14 +206,14 @@ function App() {
         </table>
         </div>
         <>
-      <Modal colorScheme={'rgb(41, 39, 39)'}  closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
+      <Modal bg='blackAlpha.300' backdropFilter='blur(10px) hue-rotate(90deg)'  closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Olá, amigos.</ModalHeader>
           <ModalBody>
             Essa é uma aplicação feita somente para fins educacionais.<br/>
             Por favor, insira seu nome para continuarmos:
-            <Input color={'white'}  value={name} marginTop={5} onChange={(e) => {
+            <Input bg={'gray.600'} color={'white'}   value={name} marginTop={5} onChange={(e) => {
               setName(e.currentTarget.value)
             }}/>
           </ModalBody>
