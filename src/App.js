@@ -27,7 +27,7 @@ function App() {
   const [wrongCharacteres, setWrongCharacteres] = useState(0)
   const [alreadyTyped, setAlreadyTyped] = useState([])
   const [position, setPosition] = useState(0)
-  const [phrase, setPhrase] = useState("Com isso, danem-se os objetivos da Rio-92, às favas com a Agenda 21 local.")
+  const [phrase, setPhrase] = useState("Costumo usar, alternadamente, dois relógios de pulso. O que prefiro mostra apenas o dia do mês.")
   const arrayPhrase = phrase.split('');
   const arrayType = type.split('');
   const arrayOfPhrasesWords = phrase.split(' ')
